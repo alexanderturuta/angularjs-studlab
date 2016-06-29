@@ -10,7 +10,7 @@ serviceModule.service('peopleService', function () {
             null,
             undefined
         ];
-    }
+    };
 
     return {
         get: get

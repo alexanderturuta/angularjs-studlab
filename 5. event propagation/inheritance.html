@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xml:ng="http://angularjs.org" data-ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="inheritance.js"></script>
+</head>
+<body ng-controller="EventController">
+    <div>parent{{count}}</div>
+    <div ng-controller="EventController">
+        <div>middle{{count}}</div>
+        <div><button ng-click="$broadcast('inc')">broadcast</button></div>
+        <div><button ng-click="$emit('inc')">emit</button></div>
+        <div ng-controller="EventController">
+            <div>child{{count}}</div>
+        </div>
+    </div>
+</body>
+</html>
