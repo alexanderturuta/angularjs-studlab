@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xml:ng="http://angularjs.org" data-ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Automatic bootstrapping</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="controlleras.js"></script>
+</head>
+<body ng-controller="SimpleController as ctrl">
+<input type="text" ng-model="ctrl.foo"/>
+<div ng-controller="ChildController as chld">
+    <input type="text" ng-model="ctrl.foo"/>
+</div>
+</body>
+</html>

@@ -6,13 +6,20 @@
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
 </head>
-<body ng-init="name='Alex'">
+<body>
 
-    <input type="text" ng-model="name">
-
-    <div>
-        {{name}}
-    </div>
+<ul id="container" ng-init='
+    people=[
+        "John",
+        "Alex",
+        "Andrew",
+        "Jack",
+        null,
+        undefined
+        ]'
+>
+    <li ng-repeat="person in people"><input type="text" ng-model="person"/></li>
+</ul>
 
 </body>
 </html>
