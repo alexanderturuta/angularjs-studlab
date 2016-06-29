@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual bootstrapping</title>
+</head>
+<body>
+{{'Hello world'}}
+<script src="../node_modules/angular/angular.js"></script>
+<script>
+    angular.module('app', []);
+    angular.element(document).ready(function () {
+        angular.bootstrap(document, ['app']);
+    });
+</script>
+</body>
+</html>

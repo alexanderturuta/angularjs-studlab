@@ -1,0 +1,11 @@
+{
+  "name": "angular-js-stud-lab",
+  "version": "1.0.0",
+  "description": "This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app. You can use it to quickly bootstrap your angular webapp projects and dev environment for these projects.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Turuta",
+  "license": "ISC"
+}
