@@ -1,13 +1,10 @@
-var app = angular.module('app',['serviceModule', 'providerModule', 'valueModule']);
-    
-    //.config(function (dbProvider) {
-    //debugger
-    //dbProvider.setConnectionString('production');
-//});
+var app = angular.module('app',['valueModule', 'factoryModule', 'serviceModule'])
 
-app.controller('SimpleController', ['$scope', 'apiService', 'secret', function ($scope, apiService, secret) {
+
+app.controller('SimpleController', ['$scope', 'clientId', 'apiService', function ($scope, clientId, apiService) {
+    $scope.result = '';
     $scope.call = function () {
-        apiService.getUser(5);
+         $scope.result = apiService.getUser(+$scope.userId);
     };
-    $scope.secret = secret;
+    $scope.userId = 1;
 }]);

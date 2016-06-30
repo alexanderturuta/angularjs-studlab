@@ -6,17 +6,16 @@
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="value.js"></script>
-    <script src="provider.js"></script>
-    <script src="value.js"></script>
     <script src="factory.js"></script>
+    <script src="provider.js"></script>
     <script src="service.js"></script>
+
     <script src="app.js"></script>
 </head>
 <body ng-controller="SimpleController">
-    <ul id="container">
-        <li ng-repeat="person in people">{{person}}</li>
-    </ul>
-    Tell me the secret: {{secret}}
-<button ng-click="call()">Call</button>
+<input type="text" ng-model="userId"><button ng-click="call()">Get User</button>
+<div>
+    {{result}}
+</div>
 </body>
 </html>

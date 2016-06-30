@@ -1,6 +1,6 @@
 var providerModule = angular.module('providerModule', []);
 
-providerModule.provider('dbProvider', function () {
+providerModule.provider('dbProvider', function() {
     var connectionString = 'local';
 
     return {
@@ -14,8 +14,9 @@ providerModule.provider('dbProvider', function () {
             }
             return {
                 timeOut: 10,
-                getConnecitonString: getConnectionString
+                getConnectionString: getConnectionString
             }
         }
     }
 });
+
