@@ -1,3 +1,3 @@
 var valueModule = angular.module('valueModule', []);
 
-valueModule.value('clientId', 'Hello World!');
+valueModule.value('clientId', 'DFafa213safk==');

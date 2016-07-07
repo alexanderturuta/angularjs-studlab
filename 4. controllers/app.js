@@ -1,12 +1,12 @@
 var app = angular.module('app',[]);
 
-app.controller('SimpleController', ['$scope', function ($scope) {
+function SimpleController($scope) {
     $scope.people = [
         "John",
         "Alex",
         "Andrew",
-        "Jack",
-        null,
-        undefined
+        "Jack"
     ];
-}]);
+}
+
+app.controller('SimpleController', ['$scope', SimpleController]);

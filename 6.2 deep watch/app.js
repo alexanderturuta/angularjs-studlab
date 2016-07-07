@@ -8,7 +8,7 @@ app.controller('SimpleController', ['$scope', function ($scope) {
 
     $scope.$watch('user', function (newValue, oldValue) {
         $scope.log.push({newValue: newValue, oldValue: oldValue})
-    });
+    }, true);
 
     $scope.clear = function () {
         $scope.log = [];

@@ -22,3 +22,4 @@ searchBoxModule
         template: '<input type="text" ng-value="term"/><button>Search</button>'
     }
 });
+

@@ -52,3 +52,4 @@ function ApiService(apiToken, dbProvider) {
 }
 
 serviceModule.service('apiService', ['apiToken', 'dbProvider', ApiService]);
+

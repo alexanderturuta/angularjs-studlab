@@ -8,7 +8,6 @@ providerModule.provider('dbProvider', function() {
             connectionString = connection;
         },
         $get: function () {
-            debugger
             function getConnectionString() {
                 return connectionString;
             }

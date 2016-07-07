@@ -8,13 +8,15 @@
     <script src="inheritance.js"></script>
 </head>
 <body ng-controller="EventController">
-    <div>parent{{count}}</div>
+    <div>parent {{count}}</div>
     <div ng-controller="EventController">
-        <div>middle{{count}}</div>
-        <div><button ng-click="$broadcast('inc')">broadcast</button></div>
-        <div><button ng-click="$emit('inc')">emit</button></div>
+        <div>
+            middle {{count}}
+            <button ng-click="$broadcast('inc')">broadcast</button>
+            <button ng-click="$emit('inc')">emit</button>
+        </div>
         <div ng-controller="EventController">
-            <div>child{{count}}</div>
+            <div>child {{count}}</div>
         </div>
     </div>
 </body>
