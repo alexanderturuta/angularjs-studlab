@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xml:ng="http://angularjs.org" data-ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Event propagation</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div ng-controller="EventController" ng-class="'father'">
+        <div>parent {{count}}</div>
+        <div ng-controller="EventController" ng-class="'child'">
+            <div>
+                middle {{count}}
+                <button ng-click="$broadcast('inc')">broadcast</button>
+                <button ng-click="$emit('inc')">emit</button>
+            </div>
+            <div ng-controller="EventController" ng-class="'grandchild'">
+                <div>child {{count}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

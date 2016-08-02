@@ -2,19 +2,15 @@
 <html lang="en" xml:ng="http://angularjs.org" data-ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Automatic bootstrapping</title>
+    <title>Built in directives</title>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body ng-controller="SimpleController">
-<h3>Element:</h3>
-    <input type="text" ng-model="user.name">
-    <hr>
-
-    <button ng-click="clear()">Clear</button>
-    <h3>Change log:</h3>
-    <ul id="container">
-        <li ng-repeat="l in log">{{l.oldValue}} - {{l.newValue}}</li>
+    <button ng-click="toggle()">{{isShown ? 'Hide' : 'Show'}}</button>
+    <ul ng-if="isShown">
+        <li ng-repeat="person in people"><span ng-bind="person" ng-class="'red'"></span></li>
     </ul>
 </body>
 </html>

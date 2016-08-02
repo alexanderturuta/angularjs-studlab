@@ -8,13 +8,15 @@
     <script>
         function onClick($scope) {
             //$scope.$apply('name="Alex"');
-            $scope.name = 'Alex';
+            $scope.name = $scope.newName;
             $scope.$digest();
         }
     </script>
 </head>
 <body ng-controller="SimpleController">
-    {{name}}
+    My name is: {{name}}
+    <br>
+    My new name is: <input type="text" ng-model="newName">
     <button onclick="onClick(angular.element(this).scope())">Change</button>
 </body>
 </html>

@@ -6,13 +6,16 @@
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="inheritance.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body ng-controller="FatherController">
-    <div>My name is {{name}}</div>
-    <div ng-controller="ChildController">
-        <div>I'm {{age}} years old. My father's name is {{name}}.</div>
-        <div ng-controller="GrandChildController">
-            <div>I'm from {{lastname}}'s family. My father is {{age}} years old. My grandfather's name is {{name}}.</div>
+<body>
+    <div ng-controller="FatherController" ng-class="'father'">
+        <div>My name is {{name}}</div>
+        <div ng-controller="ChildController" ng-class="'child'">
+            <div>I'm {{age}} years old. My father's name is {{name}}.</div>
+            <div ng-controller="GrandChildController" ng-class="'grandchild'">
+                <div>I'm from {{lastname}}'s family. My father is {{age}} years old. My grandfather's name is {{name}}.</div>
+            </div>
         </div>
     </div>
 </body>

@@ -2,23 +2,13 @@
 <html lang="en" xml:ng="http://angularjs.org" data-ng-app>
 <head>
     <meta charset="UTF-8">
-    <title>Automatic bootstrapping</title>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <title>Interpolation</title>
     <script src="../node_modules/angular/angular.js"></script>
 </head>
 <body>
-<ul id="container" ng-init='
-    people=[
-        "John",
-        "Alex",
-        "Andrew",
-        "Jack",
-        null,
-        undefined
-        ]'
-    >
-    <li ng-repeat="person in people">{{person}}</li>
-</ul>
+<div id="container" ng-init='name="John Smith"'>
+    My name is {{name}}
+</div>
 
 
 </body>

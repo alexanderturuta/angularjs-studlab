@@ -2,15 +2,17 @@
 <html lang="en" xml:ng="http://angularjs.org" data-ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Automatic bootstrapping</title>
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <title>Controller as</title>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body ng-controller="SimpleController">
-Root value: <input type="text" ng-model="foo"/>
-<div ng-controller="ChildController">
-    Child value: <input type="text" ng-model="foo"/>
-</div>
+<body>
+    <div ng-controller="SimpleController" ng-class="'father'">
+        Root value: <input type="text" ng-model="foo"/>
+            <div ng-controller="ChildController" ng-class="'child'">
+                Child value: <input type="text" ng-model="foo"/>
+            </div>
+    </div>
 </body>
 </html>

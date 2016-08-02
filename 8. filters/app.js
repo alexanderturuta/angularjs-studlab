@@ -7,9 +7,7 @@ app.controller('SimpleController', ['$scope', function ($scope) {
         3,
         56,
         09,
-        23,
-        null,
-        undefined
+        23
     ];
 }]);
 

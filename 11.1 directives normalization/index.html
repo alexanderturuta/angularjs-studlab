@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xml:ng="http://angularjs.org" data-ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Build in directives</title>
+    <script src="../node_modules/angular/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="SimpleController">
+    <input ng-model='name'> <hr/>
+    <span ng-bind="name"></span> <br/>
+    <span ng:bind="name"></span> <br/>
+    <span ng_bind="name"></span> <br/>
+    <span data-ng-bind="name"></span> <br/>
+    <span x-ng-bind="name"></span> <br/>
+</body>
+</html>

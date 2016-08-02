@@ -2,7 +2,8 @@
 <html lang="en" xml:ng="http://angularjs.org" data-ng-app>
 <head>
     <meta charset="UTF-8">
-    <title>Two way</title>
+    <title>Automatic bootstrapping</title>
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
 </head>
 <body>
@@ -11,7 +12,7 @@
     <input type="text" ng-model="name">
 </div>
 <div>
-    Answer: My name is {{name || 'Unknown'}}.
+    Answer: My name is {{::name}}.
 </div>
 </body>
 </html>
